@@ -1,0 +1,350 @@
+*{
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: 'Poppins';
+    background-image: url('background/background-blue.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+body, header, .container{
+    min-width: 1024px;
+}
+
+
+
+
+.btn-enviar{
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color:#0073ff8c;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-top: 50px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: visible !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: auto !important;
+    max-width: none !important;
+    min-width: fit-content !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+
+}
+
+.btn-enviar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 6px rgba(0, 119, 255, 0.4);
+}
+
+.btn-enviar:active {
+    transform: translateY(-1px); /* Efeito ao clicar */
+}
+
+
+
+
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+    /* navegação*/
+nav ul{
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+
+ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 1px solid transparent;
+    
+}
+
+ul li a:hover{
+    background-color: rgba(17, 0, 255, 0.252); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
+}
+
+/* JD*/
+.destaque-logo{
+    font-weight: 900;
+    font-size: 50px;
+    background: linear-gradient(135deg,rgba(255, 255, 2, 0.651) 20%,#7f00ff 40%, #ff007f 70%, #ffae00 100% );  
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.167)) 
+            drop-shadow(0px 0px 8px rgba(0, 210, 255, 0.6))
+            drop-shadow(0px 0px 15px rgba(255, 0, 127, 0.4));
+            display: inline-block;
+    padding-right: 8px;
+}
+
+/* solutions*/
+.logo{
+    color: rgba(255, 255, 255, 0.794);
+    white-space: nowrap;
+    font-size: 35px;
+}   
+
+
+/* abertura chamado*/
+.titulo-pagina{
+    text-align: center;
+    color: white;
+    font-size: 24px;   
+    margin-bottom: 10px !important;
+    margin-top: 20px;
+    max-width: 800px;
+    min-width: 600px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    
+}
+
+/* caixa principal e unica*/
+.formulario-chamado {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;     
+    min-width: 600px;
+    margin: 40px auto;
+    margin-top: 10px;
+    border: 8px solid transparent;
+    border-radius: 24px;
+    background-image:  
+        linear-gradient(#ffffff, #ffffff), 
+        linear-gradient(135deg, #00d5ff6e 0%,#0073ff8c 40%, #0073ff8c 80%);
+        /* gradiente da borda*/
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: 0px 8px 32px rgba(142, 146, 143, 0.187);
+    align-items: flex-start;
+    padding: 30px;
+    gap: 30px;
+}
+
+/* titulos*/
+.coluna {
+    width: 45%;
+    font-size: 16px;   
+}
+
+/* aqui muda as caixinhas*/
+.campo input, 
+.campo textarea,
+.campo select, 
+.input-icone {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 15px 5px 18px !important;
+    background-color: transparent;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;        
+    outline: none;
+}
+
+/*posição dos icones dentro das caixas*/
+.input-icone i {
+    position: absolute;
+    left: 12px;         
+    color: rgba(128, 128, 128, 0.444);
+    pointer-events: none;    
+}
+
+/* posição do icone da descrição*/
+.input-icone:has(textarea) i {
+    top: 15px !important;       
+    transform: none !important;   
+}
+
+/*altura e margem da caixa descrição*/
+.input-icone textarea {
+    padding-top: 15px !important;   
+    padding-left: 18px !important;    
+}
+
+/*preenchimento das caixas*/
+.input-icone {
+    position: relative; 
+    width: 100%; 
+    border-radius: 12px; 
+    background-color: rgba(193, 191, 191, 0.256);
+    display: flex;      
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+
+
+/*PAGINA DOS MEUS CHAMADOS*/
+
+body{
+    font-family: 'Poppins', sans-serif; 
+}
+
+.container-principal {
+    width: 100%;
+    max-width: 800px; /* Use a mesma largura da caixa do formulário da pag 1 */
+    margin: 0 auto;
+}
+
+
+.cabecalho-secao {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px !important;
+    margin-top: 40px !important;       
+}
+
+
+.cabecalho-secao .titulo-pagina {
+    margin: 0;
+    text-align: left;
+}
+
+
+.cabecalho-secao h1,
+.cabecalho-secao .titulo-pagina {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+}
+
+
+.cabecalho-secao a.btn-enviar {
+    margin-top: 0 !important;
+    margin-top: 0 !important;
+    transform: translateY(-4px);
+}
+
+
+a.btn-enviar {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: #0073ff8c;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+    text-align: center;
+}
+
+
+/* Ajustes da caixa branca para a tabela */
+.container-tabela {
+    padding: 0 !important; 
+    overflow: hidden;      
+}
+
+
+/* Estilo da Tabela */
+.tabela-chamados {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+
+.tabela-chamados thead tr {
+    background-color: #0088ff;
+    color: #ffffff;
+}
+
+
+.tabela-chamados th, 
+.tabela-chamados td {
+    padding: 16px 20px;
+}
+
+
+.tabela-chamados td {
+    color: #333333;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.status-badge.em-aberto {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-badge.em-andamento {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.status-badge.concluido {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-badge.cancelado {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Botão de Excluir na Tabela */
+.btn-excluir {
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 2px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.btn-excluir:hover {
+    background-color: rgba(220, 53, 69, 0.1);
+}
